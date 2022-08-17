@@ -1,0 +1,76 @@
+
+<!-- <h3 *ngif="cou>0 else elseBlock" >
+  <div class="jumbotron">
+    <h1>Add NEW Address</h1>
+    <button type="submit" class="btn btn-info">Add</button>
+  </div>
+</h3>
+
+
+
+
+<ng-template #elseBlock> -->
+<form FormGroup="addressform" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="address"> Address:</label>
+    <input type="text"  class="form-control" FormControlName="address" name="address" placeholder="Address first Line">
+  </div>
+  <div class="form-group">
+    <label for="city"> City:</label>
+    <input type="text"   class="form-control" FormControlName="city" name="city" placeholder="city">
+  </div>
+  <div class="form-group">
+    <label for="state"> State:</label>
+    <input type="text"   class="form-control" FormControlName="state" name="state" placeholder="state">
+  </div>
+  <div class="form-group">
+    <label for="phonenumber"> Phonenumber</label>
+    <input type="text"   class="form-control" FormControlName="phonenumber" name="phonenumber" placeholder="phonenumber">
+  </div>
+  <div class="form-group">
+    <label for="pincode"> Pincode:</label>
+    <input type="text"   class="form-control" FormControlName="pincode" name="pincode" placeholder="pincode">
+  </div>
+    
+  <button type="submit" class="btn btn-info">save</button>
+</form>
+<br>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Address Table</h2>           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Phonenumber</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Phonenumber</th>
+        <th>Modify</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngfor="let us of use">
+      <tr>
+        <td>{{us.City}}</td>
+        <td>{{us.Phonenumber}}</td>
+        <td>{{us.State}}</td>
+        <td>{{us.PinCode}}</td>
+        <td>{{us.Address}}</td>
+        <td> <button type="submit" class="btn btn-info">Modify</button></td>
+        <td><button type="submit" class="btn btn-info">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<!-- </ng-template> -->
